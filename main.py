@@ -1,5 +1,5 @@
 # Python code for a relay prototpye switch on and on_off with display
-
+# Pin 8 is relay
 def on_button_pressed_a():
     global on
     if show == 0:
@@ -16,7 +16,7 @@ def on_button_pressed_b():
         lcd1602.put_number(on, 0, 0)
         show = 1
         time = 2
-        pins.digital_write_pin(DigitalPin.P8, on)
+        pins.digital_write_pin(DigitalPin.P8, on) 
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
 time = 0
